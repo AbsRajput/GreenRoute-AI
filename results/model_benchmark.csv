@@ -1,0 +1,4 @@
+dataset,model,accuracy,f1_score,train_time_seconds,prediction_batch_seconds_100_repeats,prediction_latency_ms_per_sample,training_emissions_kg_co2eq_estimate,prediction_emissions_kg_co2eq_estimate,test_samples,latency_repeats,emissions_prediction_repeats,emissions_measurement_type
+breast_cancer,logistic_regression,0.9824561403508771,0.9824561403508771,0.0131464000151027,0.15472369999042712,0.013572254385125186,2.113375318182709e-11,3.70088842236072e-09,114,100,100,CodeCarbon estimate
+breast_cancer,random_forest,0.956140350877193,0.9560273762928302,0.3026532999938354,1.61046830000123,0.1412691491229149,9.795685414037855e-09,3.3571687012510214e-08,114,100,100,CodeCarbon estimate
+breast_cancer,decision_tree,0.9210526315789473,0.9215739274819479,0.008357600017916411,0.10730119998333976,0.009412385963450854,6.051605463395296e-11,8.123673386437622e-09,114,100,100,CodeCarbon estimate
