@@ -362,6 +362,239 @@ hr {
     .hero-title { font-size: 2.5rem; }
     .metric-value { font-size: 1.45rem; }
 }
+
+/* ==========================================================
+   GREENROUTE-AI | EMERALD x CRIMSON GLASS UI
+   Bright glass surfaces, strong contrast and subtle motion
+   ========================================================== */
+:root {
+    --gr-bg: #08131b;
+    --gr-panel: rgba(17, 36, 47, .82);
+    --gr-panel-strong: #122b38;
+    --gr-emerald: #35e09a;
+    --gr-emerald-bright: #6bffc0;
+    --gr-crimson: #ff5474;
+    --gr-crimson-soft: #ff8298;
+    --gr-text: #f3fff9;
+    --gr-muted: #b4c9c9;
+    --gr-border: rgba(109, 255, 195, .22);
+}
+
+/* Page atmosphere */
+.stApp {
+    background:
+      radial-gradient(ellipse at 8% 4%, rgba(53,224,154,.19), transparent 30%),
+      radial-gradient(ellipse at 92% 9%, rgba(255,84,116,.15), transparent 28%),
+      radial-gradient(ellipse at 55% 100%, rgba(28,112,104,.15), transparent 42%),
+      linear-gradient(145deg, #071119 0%, #0b1b25 48%, #101923 100%) !important;
+    color: var(--gr-text) !important;
+}
+
+/* Streamlit top chrome */
+[data-testid="stHeader"] {
+    background: rgba(7, 17, 25, .84) !important;
+    backdrop-filter: blur(18px);
+}
+[data-testid="stToolbar"] {
+    background: transparent !important;
+}
+
+/* Sidebar glass */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, rgba(12,31,40,.97), rgba(7,19,27,.98)) !important;
+    border-right: 1px solid rgba(80,230,171,.24) !important;
+    box-shadow: 12px 0 42px rgba(0,0,0,.18);
+}
+section[data-testid="stSidebar"] > div {
+    background: transparent !important;
+}
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
+    color: #e9fff5 !important;
+}
+
+/* Strong readable text */
+.stApp h1, .stApp h2, .stApp h3, .stApp h4,
+.stApp p, .stApp li, .stApp label,
+.stApp [data-testid="stCaptionContainer"] {
+    color: var(--gr-text);
+}
+.stApp [data-testid="stCaptionContainer"] {
+    color: var(--gr-muted) !important;
+}
+
+/* Glass cards and custom panels */
+.glass, .metric-card {
+    background: linear-gradient(145deg, rgba(23,54,65,.88), rgba(12,31,42,.86)) !important;
+    border: 1px solid rgba(108,239,190,.24) !important;
+    box-shadow: 0 14px 38px rgba(0,0,0,.20), inset 0 1px 0 rgba(255,255,255,.07);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+}
+.glass:hover, .metric-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(107,255,192,.62) !important;
+    box-shadow: 0 20px 48px rgba(0,0,0,.30), 0 0 24px rgba(53,224,154,.10);
+}
+.metric-card:after {
+    background: linear-gradient(90deg, var(--gr-emerald), var(--gr-crimson), transparent) !important;
+}
+.metric-label, .mini-label {
+    color: #a9d7c8 !important;
+}
+.metric-value {
+    color: #f4fff9 !important;
+}
+.metric-foot, .section-sub {
+    color: #afc5c7 !important;
+}
+
+/* Hero: emerald glow with crimson highlight */
+.hero {
+    background:
+      radial-gradient(ellipse at 88% 12%, rgba(255,84,116,.20), transparent 34%),
+      radial-gradient(ellipse at 10% 100%, rgba(53,224,154,.22), transparent 42%),
+      linear-gradient(125deg, #123c38 0%, #102a35 52%, #251d2b 100%) !important;
+    border: 1px solid rgba(105,255,190,.38) !important;
+    box-shadow: 0 22px 65px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.09);
+}
+.hero-title { color: #f6fff9 !important; }
+.gradient {
+    background: linear-gradient(90deg, #70ffc0 0%, #35e09a 48%, #ff718c 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+.hero-copy { color: #d0e6df !important; }
+.tag {
+    color: #eafff4 !important;
+    background: rgba(5,22,26,.48) !important;
+    border-color: rgba(120,255,199,.26) !important;
+    transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+.tag:hover {
+    transform: translateY(-3px);
+    border-color: var(--gr-crimson) !important;
+    background: rgba(255,84,116,.12) !important;
+}
+
+/* Buttons: emerald base, crimson hover edge */
+.stApp .stButton > button,
+.stApp .stDownloadButton > button {
+    color: #071a16 !important;
+    background: linear-gradient(105deg, #69f5b7 0%, #35d99a 58%, #a1ffd1 100%) !important;
+    border: 1px solid rgba(113,255,197,.7) !important;
+    border-radius: 11px !important;
+    box-shadow: 0 8px 22px rgba(53,224,154,.14);
+    font-weight: 800 !important;
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease !important;
+}
+.stApp .stButton > button:hover,
+.stApp .stDownloadButton > button:hover {
+    transform: translateY(-2px);
+    filter: saturate(1.12) brightness(1.05);
+    border-color: var(--gr-crimson) !important;
+    box-shadow: 0 12px 28px rgba(255,84,116,.20), 0 0 18px rgba(53,224,154,.14);
+}
+.stApp .stButton > button:active,
+.stApp .stDownloadButton > button:active {
+    transform: translateY(0) scale(.985);
+}
+
+/* Inputs and dropdowns: dark glass + bright text */
+.stApp [data-baseweb="select"] > div,
+.stApp [data-baseweb="input"] > div,
+.stApp [data-baseweb="base-input"],
+.stApp input, .stApp textarea {
+    background: #183542 !important;
+    color: #f5fff9 !important;
+    -webkit-text-fill-color: #f5fff9 !important;
+    border-color: #456875 !important;
+    border-radius: 10px !important;
+}
+.stApp [data-baseweb="select"] *,
+.stApp [data-baseweb="select"] svg {
+    color: #f5fff9 !important;
+    fill: #f5fff9 !important;
+}
+.stApp input::placeholder, .stApp textarea::placeholder {
+    color: #b6cdca !important;
+    -webkit-text-fill-color: #b6cdca !important;
+}
+[data-baseweb="popover"], [data-baseweb="menu"], [role="listbox"],
+[role="option"] {
+    background: #17313d !important;
+    color: #f5fff9 !important;
+}
+[role="option"]:hover {
+    background: #285548 !important;
+}
+
+/* Slider, checkbox and radio */
+.stApp [data-testid="stSlider"] [role="slider"] {
+    background: var(--gr-emerald) !important;
+    border-color: var(--gr-emerald-bright) !important;
+    box-shadow: 0 0 12px rgba(53,224,154,.35);
+}
+.stApp [data-testid="stCheckbox"] label,
+.stApp [data-testid="stRadio"] label {
+    color: #effff7 !important;
+}
+
+/* Tabs */
+.stApp [data-testid="stTabs"] button {
+    color: #b8ceca !important;
+    transition: color .2s ease, background .2s ease;
+}
+.stApp [data-testid="stTabs"] button:hover {
+    color: #75ffc1 !important;
+    background: rgba(53,224,154,.08) !important;
+}
+.stApp [data-testid="stTabs"] button[aria-selected="true"] {
+    color: #75ffc1 !important;
+    border-bottom-color: var(--gr-emerald) !important;
+}
+
+/* Uploader and tables */
+.stApp [data-testid="stFileUploader"] {
+    background: rgba(17,43,53,.65) !important;
+    border: 1px dashed rgba(105,255,190,.55) !important;
+    border-radius: 14px !important;
+}
+.stApp [data-testid="stDataFrame"],
+.stApp [data-testid="stTable"] {
+    background: #122b38 !important;
+    border: 1px solid rgba(105,255,190,.24) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    max-width: 100%;
+}
+
+/* Notes, alerts and separators */
+.note {
+    background: linear-gradient(100deg, rgba(53,224,154,.10), rgba(255,84,116,.06)) !important;
+    border-left-color: var(--gr-emerald) !important;
+    color: #d8eee5 !important;
+}
+hr { border-color: rgba(105,255,190,.17) !important; }
+
+/* Subtle motion without forcing animation on reduced-motion users */
+@media (prefers-reduced-motion: no-preference) {
+    .hero { animation: gr-enter .65s ease-out both; }
+    @keyframes gr-enter {
+        from { opacity: 0; transform: translateY(9px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -410,14 +643,16 @@ def make_chart(df, x_col, y_col, title, y_label):
         return
 
     fig, ax = plt.subplots(figsize=(8, 3.5))
-    fig.patch.set_facecolor("#0b1722")
-    ax.set_facecolor("#0b1722")
+    fig.patch.set_facecolor("#101923")
+    ax.set_facecolor("#101923")
 
     bars = ax.bar(
         plot_df[x_col].astype(str),
         plot_df[y_col],
-        edgecolor="#62f5bd",
-        linewidth=.7
+        color="#35D99A",
+        edgecolor="#FF5474",
+        linewidth=1.0,
+        alpha=.92
     )
 
     ax.set_title(title, color="#effcfb", pad=13, fontsize=12)
@@ -428,7 +663,7 @@ def make_chart(df, x_col, y_col, title, y_label):
     ax.set_axisbelow(True)
 
     for spine in ax.spines.values():
-        spine.set_color("#243c49")
+        spine.set_color("#34505B")
 
     for bar in bars:
         height = bar.get_height()
